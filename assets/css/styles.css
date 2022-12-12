@@ -14,7 +14,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-weight: 400;
 }
 
 /* Base Styles */
@@ -91,12 +90,32 @@ p {
   92%{color:#1a75ff}
   to{color:#6a5df8}
 }
+.hue-background {
+  background-color: #6a5df8;
+  animation: 60s ease 0s infinite normal none running hue-bg-change;
+}
+
+@keyframes hue-bg-change{
+  8%{background-color:#6a5df8}
+  12%{background-color:#c957e6}
+  20%{background-color:#d2486b}
+  28%{background-color:#bf44ac}
+  36%{background-color:#ab47d0}
+  44%{background-color:#9460f3}
+  52%{background-color:#46aced}
+  60%{background-color:#4ec4a3}
+  68%{background-color:#52c44e}
+  76%{background-color:#b8ba05}
+  84%{background-color:#d2486b}
+  92%{background-color:#1a75ff}
+  to{background-color:#6a5df8}
+}
 
 /* Navigation bar */
 #mainNav {
   position: sticky;
   width: 100%;
-  height: 65px;
+  height: 85px;
   background-color: var(--dark) !important;
   z-index: 10;
 }
@@ -105,7 +124,8 @@ p {
 }
 .navbar-title {
   font-family: var(--monospace)!important;
-  font-size: 2rem!important;
+  font-size: 3rem!important;
+  font-weight: 700;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -126,7 +146,7 @@ p {
 
 /* Hero */
 #hero {
-  height: calc(100vh - 65px); /* This is 100% of the view height, minus the size of the navbar */
+  height: calc(100vh - 85px); /* This is 100% of the view height, minus the size of the navbar */
   background: linear-gradient(rgba(41, 40, 45, 0.9), rgba(21, 20, 24, 0.9)), url(../images/patternpad.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,8 +216,34 @@ p {
 .link-details:hover {
   color: var(--blurple)!important;
 }
+/* Skills */
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: max-content;
+  background-color: var(--dark);
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+.skills-grid {
+  margin: 30px auto!important;
+}
+.custom-card {
+  background-color: transparent!important;
+  border: none!important;
+  margin: 10px auto;
+}
+.custom-card img {
+  height: 150px;
+  width: fit-content;
+  align-self: center;
+}
+.custom-card-body {
+  text-align: center;
+}
 
-/* Contact Section */
+/* About/Contact Section */
 #contact {
   display: flex;
   flex-direction: column;
@@ -205,6 +251,7 @@ p {
   height: max-content;
   background-color: var(--dark);
   padding-left: 20px;
+  padding-bottom: 50px;
 }
 .contact-details {
   padding: 20px 0;
@@ -217,6 +264,25 @@ p {
 
 .contact-details a:hover {
   color: var(--blurple)
+}
+
+/* Footer */
+#footer {
+  height: max-content
+}
+
+#footer p {
+  padding: 10px 10px 40px 10px;
+  font-family: var(--monospace);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
