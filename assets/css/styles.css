@@ -18,11 +18,17 @@
   /* setting default font weight */
 }
 
+/* Base Styles */
+a {
+  text-decoration: none !important;
+}
+
 /* Navigation bar */
 
 #mainNav {
   position: sticky;
   width: 100%;
+  height: 65px;
   background-color: var(--dark) !important;
   z-index: 10;
 }
@@ -40,7 +46,7 @@
 /* Hero */
 
 #hero {
-  height: calc(100vh - 57px); /* This is 100% of the view height, minus the size of the navbar */
+  height: calc(100vh - 65px); /* This is 100% of the view height, minus the size of the navbar */
   background-color: #6a5df8;
 }
 #hero img {
@@ -55,6 +61,26 @@
 /* Portfolio */
 
 #portfolio {
-  height: auto;
+  position: relative;
+  height: max-content;
+  padding: 25px;
   background-color: #404040;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover !important;
+  object-position: center;
+}
+.img-title {
+  font-size: 24px;
+  padding: 20px;
+  margin-bottom: -65px;
+  color: white;
+  background-color: #151418;
+  width: fit-content;
+  position: relative;
+  bottom: 150px;
+  text-align: left;
 }
