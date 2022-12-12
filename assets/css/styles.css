@@ -14,7 +14,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: var(--poppins);
   font-weight: 400;
 }
 
@@ -41,12 +40,14 @@ a {
   text-decoration: none !important;
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--poppins);
   color: var(--white);
 }
 p {
   margin-bottom: 0!important;
   color: var(--white);
   font-family: var(--monospace);
+  line-height: 1.5em;
 }
 .page-section {
   text-align: left;
@@ -61,7 +62,7 @@ p {
 }
 .section-header:before {
   content: "|";
-  margin-right: 2rem;
+  margin-right: 20px;
   color: var(--light-grey);
 }
 .blurple-text {
@@ -99,7 +100,20 @@ p {
 #mainNav a {
   color: var(--white)!important;
 }
+.navbar-title {
+  font-family: var(--monospace)!important;
+  font-size: 2rem!important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar-title img {
+  margin-right: 10px;
+}
 .navbar-nav {
+  font-family: var(--poppins);
+  font-size: 1.25rem;
   margin-left: auto;
   margin-right: 0 !important;
 }
@@ -192,8 +206,34 @@ p {
 .link-details:hover {
   color: var(--blurple)!important;
 }
+
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: max-content;
+  background-color: var(--dark);
+  padding-left: 20px;
+}
+.contact-details {
+  padding: 20px 0;
+  text-align: center;
+}
+.contact-details a {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.contact-details a:hover {
+  color: var(--blurple)
+}
+
 @media screen and (max-width: 768px) {
-  .hero-text {
+  .section-header, .page-section p, .hero-text {
     text-align: center;
+  }
+  .section-header::before{
+    margin-right: 15px;
   }
 }
