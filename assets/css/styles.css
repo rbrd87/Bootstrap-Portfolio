@@ -162,11 +162,6 @@ p {
 #hero-content {
   width: 60%;
 }
-.hero-alignment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 /* Portfolio */
 #portfolio {
@@ -250,8 +245,7 @@ p {
   justify-content: center;
   height: max-content;
   background-color: var(--dark);
-  padding-left: 20px;
-  padding-bottom: 50px;
+  padding: 100px 20px;
 }
 .contact-details {
   padding: 20px 0;
@@ -259,20 +253,25 @@ p {
 }
 .contact-details a {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.3rem;
+  font-family: var(--monospace);
 }
-
 .contact-details a:hover {
   color: var(--blurple)
 }
 
 /* Footer */
+.footer-line {
+  height: 5px;
+}
+
 #footer {
-  height: max-content
+  height: max-content;
+  background-color: var(--dark);
 }
 
 #footer p {
-  padding: 10px 10px 40px 10px;
+  padding: 40px 10px;
   font-family: var(--monospace);
   text-align: center;
   text-transform: uppercase;
@@ -286,10 +285,21 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .section-header, .page-section p, .hero-text {
-    text-align: center;
+  #hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-header, .page-section p, #hero-content {
+    text-align: center !important;
   }
   .section-header::before{
-    margin-right: 15px;
+    content: none;
+  }
+  .custom-card img {
+    height: 100px;
+  }
+  #contact {
+    padding: 30px 0px;
   }
 }
