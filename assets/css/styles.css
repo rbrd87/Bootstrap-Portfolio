@@ -21,7 +21,7 @@
 /* Navigation bar */
 
 #mainNav {
-  position: fixed;
+  position: sticky;
   width: 100%;
   background-color: var(--dark) !important;
   z-index: 10;
@@ -35,4 +35,26 @@
 }
 .nav-item {
   margin: 0px 15px;
+}
+
+/* Hero */
+
+#hero {
+  height: calc(100vh - 57px); /* This is 100% of the view height, minus the size of the navbar */
+  background-color: #6a5df8;
+}
+#hero img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+}
+.hero-text {
+  text-align: right;
+}
+
+/* Portfolio */
+
+#portfolio {
+  height: auto;
+  background-color: #404040;
 }
