@@ -23,6 +23,7 @@
   </head>
 
   <body>
+
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg bg-light" id="mainNav">
       <div class="container-fluid">
@@ -37,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
           <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -51,74 +52,159 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="jumbotron-fluid d-flex justify-content-center" id="hero">
+    <section class="jumbotron-fluid d-flex justify-content-center" id="hero">
         <div class="row align-items-center" id="hero-content">
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-md-6 col-lg-6 hero-alignment">
                 <img src="assets/images/profile-pic.jpeg" alt="a picture of me">
             </div>
-            <div class="hero-text col-sm-12 col-md-6 col-lg-6">
-                <h1>Rochelle Bradley</h1>
+            <div class="hero-text col-sm-12 col-md-6 col-lg-6 hero-alignment">
+                <h1>Hi, I'm <span class="hue">Rochelle</span></h1>
                 <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="container-fluid page-section" id="about">
+        <div class="row page-section" id="about-content">
+            <h2 class="section-header">About <span class="hue">me</span></h2>
+            <p>By day I am an ISTQB qualified QA Engineer, working in an agile environment as part of a fantastic development
+                team.
+                By night I am a student of the Trilogy Skills Bootcamp in Front-End Web Development, where I am expanding my
+                skills by
+                learning HTML, CSS, Javascript, jQuery, React.js, Node, and much more. This is a little portfolio page to show
+                off what I've been learning and to put it all into practice.
+            </p>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
-    <section class="container-fluid" id="portfolio">
+    <section class="container-fluid page-section" id="portfolio">
+        <div class="row page-section" id="portfolio-content">
+            <h2 class="section-header">My <span class="hue">recent</span> work</h2>
+            <p>In this section you can some of the work I have completed since starting my bootcamp journey.
+                From basic landing pages to this very portfolio page, I have learnt so many new skills and cannot wait to
+                learn more.
+            </p>
+        </div>
+        <!-- Row 1 -->
         <section class="row d-flex">
-            <figure class="portfolio-item col-sm-12 col-md-8 col-lg-8">
+            <!-- Portfolio Item 1 -->
+            <figure class="portfolio-item col-sm-12 col-md-12 col-lg-8">
                 <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
                     <img src="assets/images/horiseon-homepage-screenshot.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
                 </a>
+                <figcaption class="img-title">Horiseon SEO Webpage
+                    <a href="https://github.com/rbrd87/bootcamp-week-1-challenge" target="_blank" title="Github Repo" class="link-details">
+                        <i class="mdi mdi-github"></i> <!-- used the imported icons -->
+                    </a>
+                    <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank" title="Deployed Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
-            <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+            <!-- Portfolio Item 2 -->
+            <figure class="portfolio-item col-sm-12 col-md-12 col-lg-4">
+                <a href="https://rbrd87.github.io/mini-project-css-cheat-sheet/" target="_blank">
+                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="css cheatsheet screenshot" title="CSS Cheatsheet">
                 </a>
+                <figcaption class="img-title">CSS Cheatsheet
+                    <a href="https://github.com/rbrd87/mini-project-css-cheat-sheet" target="_blank" title="Github Repo" class="link-details">
+                        <i class="mdi mdi-github"></i>
+                    </a>
+                    <a href="https://rbrd87.github.io/mini-project-css-cheat-sheet/" target="_blank" title="Deployed Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
         </section>
+        <!-- Row 2 -->
         <section class="row d-flex">
+            <!-- Portfolio Item 3 -->
             <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/horiseon-homepage-screenshot.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+                <a href="https://rbrd87.github.io/css-grids-activity/" target="_blank">
+                    <img src="assets/images/css-grid.jpg" class="portfolio-img" alt="furniture website screenshot" title="Bootcamp CSS Grid Activity">
                 </a>
+                <figcaption class="img-title">Furniture Store Homepage
+                    <a href="https://github.com/rbrd87/css-grids-activity" target="_blank" title="Github Repo" class="link-details">
+                        <i class="mdi mdi-github"></i> <!-- used the imported icons -->
+                    </a>
+                    <a href="https://rbrd87.github.io/css-grids-activity/" target="_blank" title="Deployed Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
+            <!-- Portfolio Item 4 -->
             <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+                <a href="https://rbrd87.github.io/jakes-eatery/" target="_blank">
+                    <img src="assets/images/jakes-eatery.jpg" class="portfolio-img" alt="jakes eatery website screenshot" title="Jakes Eatery">
                 </a>
+                <figcaption class="img-title">Jakes Eatery Website
+                    <a href="https://github.com/rbrd87/jakes-eatery" target="_blank" title="Github Repo" class="link-details">
+                        <i class="mdi mdi-github"></i> <!-- used the imported icons -->
+                    </a>
+                    <a href="https://rbrd87.github.io/jakes-eatery/" target="_blank" title="Deployed Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
+            <!-- Portfolio Item 5 -->
             <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+                <a href="https://www.goolebusinessgroup.co.uk/" target="_blank">
+                    <img src="assets/images/goole-howdenshire-website.jpg" class="portfolio-img" alt="goole & howdenshire bg screenshot" title="Goole & Howdenshire BG - Wordpress Site">
                 </a>
+                <figcaption class="img-title">G & H Business Group
+                    <a href="https://www.goolebusinessgroup.co.uk/" target="_blank" title="Goole & Howdenshire BG - Wordpress Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
         </section>
+        <!-- Row 3 -->
         <section class="row d-flex">
+            <!-- Portfolio Item 6 -->
             <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/horiseon-homepage-screenshot.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+                <a href="https://www.direct4workgear.co.uk/" target="_blank">
+                    <img src="assets/images/d4w.jpg" class="portfolio-img" alt="direct4workgear website screenshot" title="Direct 4 Workgear - Wordpress Site">
                 </a>
+                <figcaption class="img-title">Direct 4 Workgear
+                    <a href="https://www.direct4workgear.co.uk/" target="_blank" title="Direct 4 Workgear - Wordpress Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
+            </figure>
+            <!-- Portfolio Item 7 -->
+            <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
+                <a href="https://designstreak.co.uk/" target="_blank">
+                    <img src="assets/images/design-streak.jpg" class="portfolio-img" alt="design streak embroidery site" title="Design Streak - Wix Site">
+                </a>
+                <figcaption class="img-title">Design Streak
+                    <a href="https://designstreak.co.uk/" target="_blank" title="Design Streak - Wix Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
             <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
+                <a href="https://www.tccthecleaningcompany.co.uk/" target="_blank">
+                    <img src="assets/images/tcc.jpg" class="portfolio-img" alt="tcc website" title="The Cleaning Company - Wix Site">
                 </a>
-            </figure>
-            <figure class="portfolio-item col-sm-12 col-md-4 col-lg-4">
-                <a href="https://rbrd87.github.io/bootcamp-week-1-challenge/" target="_blank">
-                    <img src="assets/images/cheatsheet.jpg" class="portfolio-img" alt="horiseon home page" title="Horiseon SEO Webpage">
-                    <figcaption class="img-title">Horiseon SEO Webpage</figcaption>
-                </a>
+                <figcaption class="img-title">TCC - The Cleaning Company
+                    <a href="https://www.tccthecleaningcompany.co.uk/" target="_blank" title="The Cleaning Company - Wix Site" class="link-details">
+                        <i class="mdi mdi-web"></i>
+                    </a>
+                </figcaption>
             </figure>
         </section>
     </section>
+
+    <!-- Contact Section -->
+    <section class="container-fluid page-section" id="about">
+        <div class="row page-section" id="about-content">
+            <h2 class="section-header">Let's <span class="hue">talk</span></h2>
+            <p>If you want to find out more or collaborate on a project together get in touch!</p>
+        </div>
+    </section>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
