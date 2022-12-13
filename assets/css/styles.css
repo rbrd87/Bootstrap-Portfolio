@@ -7,7 +7,7 @@
   --light-grey: #979797;
   --blurple: #6a5df8;
   --monospace: 'Azeret Mono', 'Courier New', Courier, monospace;
-  --poppins: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --poppins: 'Poppins', 'Open Sans', 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 /* Base Reset */
@@ -115,24 +115,17 @@ p {
 #mainNav {
   position: sticky;
   width: 100%;
-  height: 85px;
+  height: max-content;
   background-color: var(--dark) !important;
   z-index: 10;
 }
 #mainNav a {
-  color: var(--white)!important;
+  color: var(--white);
 }
 .navbar-title {
   font-family: var(--monospace)!important;
-  font-size: 3rem!important;
+  font-size: 2.5rem!important;
   font-weight: 700;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.navbar-title img {
-  margin-right: 10px;
 }
 .navbar-nav {
   font-family: var(--poppins);
@@ -140,13 +133,30 @@ p {
   margin-left: auto;
   margin-right: 0 !important;
 }
-.nav-item {
-  margin: 0px 15px;
+.nav-bg {
+  background-color: var(--dark);
+}
+.my-profile, .social-links {
+  font-size: 1.6rem;
+}
+.my-profile p {
+  padding: 10px 0px;
+}
+.profile-img {
+  max-width: 200px;
+  height: auto;
+  border: 5px solid var(--grey);
+}
+.social-links a {
+  padding: 10px 10px;
+}
+.social-links a:hover, #mainNav a:hover {
+  color: var(--blurple)!important;
 }
 
 /* Hero */
 #hero {
-  height: calc(100vh - 85px); /* This is 100% of the view height, minus the size of the navbar */
+  height: calc(100vh - 86px); /* This is 100% of the view height, minus the size of the navbar */
   background: linear-gradient(rgba(41, 40, 45, 0.9), rgba(21, 20, 24, 0.9)), url(../images/patternpad.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,9 +195,8 @@ p {
 .img-title {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 8px;
+  font-family: var(--poppins);
+  font-size: 1.4rem;
   padding: 10px;
   color: white;
   background-color: #151418;
@@ -245,10 +254,11 @@ p {
   justify-content: center;
   height: max-content;
   background-color: var(--dark);
-  padding: 100px 20px;
+  padding: 80px 20px 120px 20px;
 }
 .contact-details {
-  padding: 20px 0;
+  margin: 0 -10px;
+  padding: 20px 0px;
   text-align: center;
 }
 .contact-details a {
@@ -273,10 +283,11 @@ p {
 #footer p {
   padding: 40px 10px;
   font-family: var(--monospace);
+  font-size: 0.90rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--white);
-  letter-spacing: 0.2rem;
+  letter-spacing: 2px;
 }
 .footer-col {
   display: flex;
@@ -284,13 +295,19 @@ p {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1054px) {
+  .social-icons {
+    flex: none!important;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
   #hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .section-header, .page-section p, #hero-content {
+  .section-header, .page-section p, #hero-content, .hero-text {
     text-align: center !important;
   }
   .section-header::before{
