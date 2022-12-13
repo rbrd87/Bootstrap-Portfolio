@@ -212,7 +212,7 @@ p {
 .link-details {
   padding-left: 10px;
   color: var(--light-grey)!important;
-  font-size: 24px;
+  font-size: 2rem;
 }
 .link-details:first-child {
   padding-left: 20px;
@@ -220,6 +220,39 @@ p {
 .link-details:hover {
   color: var(--blurple)!important;
 }
+
+/* NEW PORTFOLIO SECTION */
+.portfolio-grid {
+  margin: 0 auto!important;
+}
+.portfolio-card {
+  background-color: transparent;
+  border: none!important;
+  margin: 10px auto;
+}
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  font-family: var(--poppins);
+  font-size: 1.4rem;
+  padding: 10px;
+  color: white;
+  background-color: #151418;
+  width: fit-content;
+  position: relative;
+  top: 500px;
+  border-bottom: 5px solid var(--blurple);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.8s ease-in-out;
+  z-index: 9;
+}
+.portfolio-card img{
+  background-color: transparent;
+  border: none!important;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
 /* Skills */
 #skills {
   display: flex;
@@ -233,17 +266,17 @@ p {
 .skills-grid {
   margin: 30px auto!important;
 }
-.custom-card {
+.skills-card {
   background-color: transparent!important;
   border: none!important;
   margin: 10px auto;
 }
-.custom-card img {
+.skills-card img {
   height: 150px;
   width: fit-content;
   align-self: center;
 }
-.custom-card-body {
+.skills-card-body {
   text-align: center;
 }
 
