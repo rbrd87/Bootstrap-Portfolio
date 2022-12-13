@@ -241,7 +241,7 @@ p {
 .skills-card {
   background-color: transparent!important;
   border: none!important;
-  margin: 10px auto;
+  margin: 0 auto!important;
 }
 .skills-card img {
   height: 100px;
@@ -250,7 +250,8 @@ p {
 }
 .skills-card-body {
   text-align: center;
-  padding-bottom: 50px!important;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
 }
 .skills-card-body:last-child {
   padding-bottom: 0px!important;
