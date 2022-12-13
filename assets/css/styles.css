@@ -73,7 +73,7 @@ p {
 
 /* Using keyframes - created an effect that cycles through multiple colours */
 .hue {
-  color: #6a5df8;
+  color: var(--blurple);
   animation: 60s ease 0s infinite normal none running hue-change;
 }
 @keyframes hue-change{
@@ -92,7 +92,7 @@ p {
   to{color:#6a5df8}
 }
 .hue-background {
-  background-color: #6a5df8;
+  background-color: var(--blurple);
   animation: 60s ease 0s infinite normal none running hue-bg-change;
 }
 @keyframes hue-bg-change{
@@ -162,15 +162,15 @@ p {
   background-size: cover;
 }
 #hero img {
-  width: 250px;
+  width: 300px;
   height: auto;
-  border-radius: 50%;
+  border: 5px solid var(--grey);
 }
 .hero-text {
   text-align: right;
 }
 #hero-content {
-  width: 60%;
+  width: 70%;
 }
 
 /* Portfolio */
