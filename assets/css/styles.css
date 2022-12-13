@@ -6,6 +6,7 @@
   --grey: #404040;
   --light-grey: #979797;
   --blurple: #6a5df8;
+  --blue: #49cbff;
   --monospace: 'Azeret Mono', 'Courier New', Courier, monospace;
   --poppins: 'Poppins', 'Open Sans', 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
@@ -52,15 +53,14 @@ p {
   line-height: 1.5em;
 }
 .page-section {
-  text-align: left;
-  padding: 35px 20px 0 20px;
-}
-.page-section p, h2{
-  padding: 0 35px 15px 35px;
+  padding: 10px;
 }
 .section-header {
   line-height: 1.2em;
   color: var(--white);
+}
+.section-header, .section-blurb {
+  padding: 20px!important;
 }
 .section-header:before {
   content: "|";
@@ -70,11 +70,12 @@ p {
 .blurple-text {
   color: var(--blurple);
 }
+
+/* Using keyframes - created an effect that cycles through multiple colours */
 .hue {
   color: #6a5df8;
   animation: 60s ease 0s infinite normal none running hue-change;
 }
-
 @keyframes hue-change{
   8%{color:#6a5df8}
   12%{color:#c957e6}
@@ -94,7 +95,6 @@ p {
   background-color: #6a5df8;
   animation: 60s ease 0s infinite normal none running hue-bg-change;
 }
-
 @keyframes hue-bg-change{
   8%{background-color:#6a5df8}
   12%{background-color:#c957e6}
@@ -150,7 +150,7 @@ p {
 .social-links a {
   padding: 10px 10px;
 }
-.social-links a:hover, #mainNav a:hover {
+.social-links a:hover, #mainNav a:hover, .contact-details a:hover, .link-details:hover {
   color: var(--blurple)!important;
 }
 
@@ -180,55 +180,14 @@ p {
   padding: 65px 20px 0px 20px;
   background-color: var(--dark)
 }
-#portfolio-content {
-  margin: 0px 0px 50px 0px;
-}
-.portfolio-img {
-  display: block;
-  width: 100%;
-  height: 600px;
-  object-fit: cover !important;
-  object-position: center;
-  border-radius: 5px;
-  filter: grayscale(45%);
-}
-.img-title {
-  display: flex;
-  align-items: center;
-  font-family: var(--poppins);
-  font-size: 1.4rem;
-  padding: 10px;
-  color: white;
-  background-color: #151418;
-  width: fit-content;
-  position: relative;
-  bottom: 180px;
-  border-bottom: 5px solid var(--blurple);
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
-  border-radius: 0px 5px 5px 0px;
-  text-align: center;
-  transition: all 0.8s ease-in-out;
-}
-.link-details {
-  padding-left: 10px;
-  color: var(--light-grey)!important;
-  font-size: 2rem;
-}
-.link-details:first-child {
-  padding-left: 20px;
-}
-.link-details:hover {
-  color: var(--blurple)!important;
-}
-
-/* NEW PORTFOLIO SECTION */
 .portfolio-grid {
   margin: 0 auto!important;
+  height: max-content;
 }
 .portfolio-card {
   background-color: transparent;
   border: none!important;
-  margin: 10px auto;
+  margin-top: -10px!important;
 }
 .portfolio-header {
   display: flex;
@@ -246,11 +205,24 @@ p {
   transition: all 0.8s ease-in-out;
   z-index: 9;
 }
-.portfolio-card img{
-  background-color: transparent;
-  border: none!important;
-  border-radius: 5px;
-  margin: 10px auto;
+.portfolio-img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover !important;
+  object-position: top;
+  filter: grayscale(45%);
+}
+.link-details {
+  padding-left: 10px;
+  color: var(--light-grey)!important;
+  font-size: 2rem;
+}
+.link-details:first-child {
+  padding-left: 20px;
+}
+.project-info {
+  padding: 10px 0 0 0!important;
 }
 
 /* Skills */
@@ -272,12 +244,25 @@ p {
   margin: 10px auto;
 }
 .skills-card img {
-  height: 150px;
+  height: 100px;
   width: fit-content;
   align-self: center;
 }
 .skills-card-body {
   text-align: center;
+  padding-bottom: 50px!important;
+}
+.skills-card-body:last-child {
+  padding-bottom: 0px!important;
+}
+.custom-btn {
+  margin: 20px auto;
+  background-color: var(--blurple)!important;
+  color: var(--white)!important;
+  font-family: var(--poppins)!important;
+}
+.custom-btn:hover {
+  box-shadow: 0px 0px 10px var(--blue);
 }
 
 /* About/Contact Section */
@@ -296,13 +281,9 @@ p {
 }
 .contact-details a {
   color: var(--white);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: var(--monospace);
 }
-.contact-details a:hover {
-  color: var(--blurple)
-}
-
 /* Footer */
 .footer-line {
   height: 5px;
@@ -328,6 +309,7 @@ p {
   align-items: center;
 }
 
+/* Media Queries for alignment purposes */
 @media screen and (max-width: 1054px) {
   .social-icons {
     flex: none!important;
